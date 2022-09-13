@@ -1,10 +1,20 @@
 import React from 'react'
+import { useParams } from 'react-router'
 import "./BeerInfo.scss"
 // Single beer page display
 
-const BeerInfo = () => {
+const BeerInfo = (props) => {
+  const { beersArr } = props;
+
+  const { beerId } = useParams();
+
+  const currentBeer = beersArr.find((beer) => beer.id === Number(beerId)) ?? {};
+
   return (
-    <div>BeerInfo</div>
+    <div>
+      <p>{beerId}</p>
+      <p>{currentBeer.name}</p>
+    </div>
   )
 }
 

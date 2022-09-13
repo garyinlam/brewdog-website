@@ -1,0 +1,23 @@
+.beer-card {
+  border: black 2px solid;
+  border-radius: 15px;
+  display: flex;
+  &__image{
+    height: 25vh;
+    width: 25vw;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .beer-card {
+    display: grid;
+    grid-template: 1fr / 100px 1fr;
+    &__image {
+      width: 100px;
+    }
+    &__tagline {
+      display: none;
+    }
+  }
+}
