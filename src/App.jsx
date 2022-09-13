@@ -1,5 +1,6 @@
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './containers/Home/Home';
 
 
 function App() {
@@ -7,9 +8,12 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          <Route>
-            
-          </Route>
+          <Route
+            path="/"
+            element={
+              <Home />
+            }
+          />
         </Routes>
       </div>
     </Router>
