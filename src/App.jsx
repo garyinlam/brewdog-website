@@ -14,7 +14,7 @@ function App() {
     let counter = 1;
     let isEmptyReturn = false;
     while (!isEmptyReturn) {
-      const url = `https://api.punkapi.com/v2/beers?per_page=80&page=${counter}`;
+      const url = `https://api.punkapi.com/v2/beers?per_page=80&page=${counter}`; 
       const res = await fetch(url);
       const data = await res.json();
       counter++;
@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     getBeers();
   }, []);
-
+  
   return (
     <Router>
       <div className="app">
@@ -39,10 +39,19 @@ function App() {
         <Routes>
           <Route
             path="/beers/:beerId"
-            element={<BeerInfo beersArr={beers} />}
+            element={
+              <BeerInfo beersArr={beers} />
+            }
           />
 
-          <Route path="/" element={<Home beersArr={beers} />} />
+          <Route 
+            path="/" 
+            element={
+              <Home 
+                beersArr={beers} 
+              />
+            } 
+          />
         </Routes>
       </div>
     </Router>
