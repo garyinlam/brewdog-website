@@ -1,3 +1,10 @@
+.card-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 @media screen and (min-width: 992px) {
   .card-container {
     display: grid;
