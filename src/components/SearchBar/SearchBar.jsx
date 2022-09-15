@@ -8,7 +8,7 @@ const SearchBar = (props) => {
 
   const toggleFilter = () => setShowFilters(!showFilters);
 
-  const { getSearchTerm, getResultsNumber, getIsAcidic, getIsClassic } = props
+  const { getSearchTerm, getResultsNumber, getIsAcidic, getIsClassic, getAbvRange } = props
   return (
     <div className='search-bar'>
       <input type="text" onChange={getSearchTerm} placeholder="Search beers by name..." className='search-bar__textbox' />
@@ -20,7 +20,7 @@ const SearchBar = (props) => {
         <option className='search-bar__option' value="40">40</option>
         <option className='search-bar__option' value="20">20</option>
       </select>
-      {showFilters&&(<FilterMenu getIsAcidic={getIsAcidic} getIsClassic={getIsClassic} />)}
+      {showFilters&&(<FilterMenu getIsAcidic={getIsAcidic} getIsClassic={getIsClassic} getAbvRange={getAbvRange} />)}
     </div>
   )
 }
