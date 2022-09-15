@@ -9,6 +9,9 @@ import "./Home.scss"
 const Home = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [resultsNumber, setResultsNumber] = useState(Number.MAX_SAFE_INTEGER);
+  const [isAcidic, setIsAcidic] = useState(false);
+  const [isClassic, setIsClassic] = useState(false);
+
 
   const { beersArr } = props;
 
@@ -25,13 +28,42 @@ const Home = (props) => {
     }
   }
 
-  const filteredBeers = beersArr?.filter((beer) => beer.name.toLowerCase().includes(searchTerm.toLowerCase())).slice(0,resultsNumber);
+  const getIsAcidic = () => {
+    setIsAcidic(!isAcidic);
+  }
+
+  const getIsClassic = () => {
+    setIsClassic(!isClassic);
+  }
+
+  const filteredBeers = 
+    beersArr?.filter((beer) => 
+      beer.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()))
+    .filter((beer) => isAcidic ? beer.ph < 4 : true)
+    .filter((beer) => isClassic ? Number(beer.first_brewed.slice(-2)) < 11 : true)
+    .slice(0,resultsNumber);
 
   return (
-    <div>
-      <SearchBar getSearchTerm={getSearchTerm} getResultsNumber={getResultsNumber} />
-      <FilterMenu />
-      <CardContainer beersArr={filteredBeers} />
+    <div className='home'>
+      <div className='search'>
+        <SearchBar 
+          getSearchTerm={getSearchTerm} 
+          getResultsNumber={getResultsNumber} 
+          getIsAcidic={getIsAcidic}
+          getIsClassic={getIsClassic}
+        />
+      </div>
+      <div className='filter-menu'>
+        <FilterMenu 
+          getIsAcidic={getIsAcidic} 
+          getIsClassic={getIsClassic}
+        />
+      </div>
+      <div className='card-con'>
+        <CardContainer beersArr={filteredBeers} />
+      </div>
     </div>
   )
 }
