@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import Header from "./components/Header/Header";
 import { useState } from "react";
@@ -34,29 +34,27 @@ function App() {
   }, []);
   
   return (
-    <Router>
-      <div className="app">
-        <Header />
-        <Routes>
-          <Route
-            path="/beers/:beerId"
-            element={
-              <BeerInfo beersArr={beers} />
-            }
-          />
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route
+          path="/beers/:beerId"
+          element={
+            <BeerInfo beersArr={beers} />
+          }
+        />
 
-          <Route 
-            path="/" 
-            element={
-              <Home 
-                beersArr={beers} 
-              />
-            } 
-          />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+        <Route 
+          path="/" 
+          element={
+            <Home 
+              beersArr={beers} 
+            />
+          } 
+        />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

@@ -3,4 +3,7 @@
 .footer {
   background-color: $colour-primary;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
 }
