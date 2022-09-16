@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import Header from "./components/Header/Header";
 import { useState } from "react";
