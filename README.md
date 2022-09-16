@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Brewdog DIY Dog Explorer Website
 
   
 
@@ -22,3 +22,5 @@ Current filters are:
  - Specifying an ABV range
 
 Each beer card can also be clicked on to show more information on a new page.
+
+Website is built mobile first and is responsive to changes in screen size

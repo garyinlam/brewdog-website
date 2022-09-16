@@ -1,13 +1,29 @@
 @use "../../assets/sass/variables" as *;
 
 .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $colour-primary;
   padding: 20px;
   &__title {
     text-transform: uppercase;
     font-family: $font-header;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
-    display: inline;
+  }
+  &__home {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header{
+    &__title{
+      font-size: 4rem;
+    }
+    &__home{
+      display: block;
+    }
   }
 }
