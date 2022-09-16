@@ -1,10 +1,11 @@
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import Header from "./components/Header/Header";
 import { useState } from "react";
 import { useEffect } from "react";
 import BeerInfo from "./containers/BeerInfo/BeerInfo";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [beers, setBeers] = useState();
@@ -33,7 +34,7 @@ function App() {
   }, []);
   
   return (
-    <Router>
+    <HashRouter>
       <div className="app">
         <Header />
         <Routes>
@@ -53,8 +54,9 @@ function App() {
             } 
           />
         </Routes>
+        <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

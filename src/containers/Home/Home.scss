@@ -1,5 +1,13 @@
+@use "../../assets/sass/variables" as *;
+
 .filter-menu {
   display: none;
+  background-color: $colour-gray;
+
+}
+
+.search {
+  background-color: $colour-gray;
 }
 
 @media screen and (min-width: 992px) {

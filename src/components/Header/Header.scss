@@ -1,6 +1,13 @@
+@use "../../assets/sass/variables" as *;
+
 .header{
+  background-color: $colour-primary;
   padding: 20px;
   &__title {
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-size: 4rem;
+    font-weight: 400;
     display: inline;
   }
 }
