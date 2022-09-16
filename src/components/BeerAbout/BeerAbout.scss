@@ -1,0 +1,21 @@
+@use "../../assets/sass/variables" as *;
+
+.beer-about {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100%;
+  &__image {
+    height: 50vh;
+    object-fit: contain;
+    margin: 30px;
+  }
+  &__food-item {
+    margin-left: 30px;
+  }
+  &__name {
+    font-family: $font-header;
+    font-size: 3rem;
+    font-weight: normal;
+  }
+}

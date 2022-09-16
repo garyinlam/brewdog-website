@@ -1,5 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
+import BeerAbout from '../../components/BeerAbout/BeerAbout';
+import BeerRecipe from '../../components/BeerRecipe/BeerRecipe';
 import "./BeerInfo.scss"
 // Single beer page display
 
@@ -8,24 +10,16 @@ const BeerInfo = (props) => {
 
   const { beerId } = useParams();
 
-  const noImage = "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
-
-  const {name, tagline, first_brewed, description, image_url, abv, food_pairing, ph} = beersArr.find((beer) => beer.id === Number(beerId)) ?? {};
+  const beer = beersArr.find((beer) => beer.id === Number(beerId)) ?? {};
 
   return (
     <div className='beer-info'>
-      <p>#{beerId}</p>
-      <h2 className='beer-info__name'>{name}</h2>
-      <img src={image_url ?? noImage} alt={name} className='beer-info__image' />
-      <h3 className='beer-info__tagline'>{tagline}</h3>
-      <p className='beer-info__date'>First brewed: {first_brewed}</p>
-      <p className='beer-info__desc'>{description}</p>
-      <p className='beer-info__abv'>ABV: {abv}</p>
-      <p className='beer-info__ph'>pH: {ph}</p>
-      <p>Food this beer goes well with:</p>
-      <ul className='beer-info__food-list'>
-        {food_pairing.map((food,index) => <li key={index} className='beer-info__food-item'>{food}</li>)}
-      </ul>
+      <div className='beer-info__general'>
+        <BeerAbout beer={beer} />
+      </div>
+      <div className='beer-info__recipe'>
+        <BeerRecipe beer={beer} />
+      </div>
     </div>
   )
 }

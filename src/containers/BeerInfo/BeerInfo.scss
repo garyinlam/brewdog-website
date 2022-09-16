@@ -1,21 +1,9 @@
 @use "../../assets/sass/variables" as *;
 
-.beer-info {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  height: 100%;
-  &__image {
-    height: 50vh;
-    object-fit: contain;
-    margin: 30px;
-  }
-  &__food-item {
-    margin-left: 30px;
-  }
-  &__name {
-    font-family: $font-header;
-    font-size: 3rem;
-    font-weight: normal;
+@media screen and (min-width: 992px) {
+  .beer-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 }
