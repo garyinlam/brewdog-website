@@ -27,7 +27,7 @@ const BeerAbout = (props) => {
       <p className='beer-about__ph'>pH: {ph}</p>
       <p>Food this beer goes well with:</p>
       <ul className='beer-about__food-list'>
-        {food_pairing.map((food,index) => <li key={index} className='beer-about__food-item'>{food}</li>)}
+        {food_pairing?.map((food,index) => <li key={index} className='beer-about__food-item'>{food}</li>)}
       </ul>
     </div>
   )

@@ -10,7 +10,7 @@ const BeerInfo = (props) => {
 
   const { beerId } = useParams();
 
-  const beer = beersArr.find((beer) => beer.id === Number(beerId)) ?? {};
+  const beer = beersArr?.find((beer) => beer.id === Number(beerId)) ?? {};
 
   return (
     <div className='beer-info'>
