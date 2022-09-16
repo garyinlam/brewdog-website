@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/brewdog-website/static/css/main.e1ed6137.css",
-    "main.js": "/brewdog-website/static/js/main.5af81fd5.js",
+    "main.js": "/brewdog-website/static/js/main.e52375a2.js",
     "static/js/787.c83e4ccf.chunk.js": "/brewdog-website/static/js/787.c83e4ccf.chunk.js",
     "index.html": "/brewdog-website/index.html",
     "main.e1ed6137.css.map": "/brewdog-website/static/css/main.e1ed6137.css.map",
-    "main.5af81fd5.js.map": "/brewdog-website/static/js/main.5af81fd5.js.map",
+    "main.e52375a2.js.map": "/brewdog-website/static/js/main.e52375a2.js.map",
     "787.c83e4ccf.chunk.js.map": "/brewdog-website/static/js/787.c83e4ccf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1ed6137.css",
-    "static/js/main.5af81fd5.js"
+    "static/js/main.e52375a2.js"
   ]
 }
