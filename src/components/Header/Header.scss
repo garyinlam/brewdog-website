@@ -19,11 +19,19 @@
 
 @media screen and (min-width: 992px) {
   .header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     &__title{
       font-size: 4rem;
     }
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__home{
-      display: block;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

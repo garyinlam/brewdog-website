@@ -22,5 +22,6 @@ Current filters are:
  - Specifying an ABV range
 
 Each beer card can also be clicked on to show more information on a new page.
+On this page the user can show the recipe for the beer.
 
 Website is built mobile first and is responsive to changes in screen size
