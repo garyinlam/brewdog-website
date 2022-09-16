@@ -1,11 +1,21 @@
+@use "../../assets/sass/variables" as *;
+
 .beer-card {
-  border: black 2px solid;
+  border: $colour-black 2px solid;
   border-radius: 15px;
   display: flex;
+  padding: 2px;
+  box-shadow: 5px 5px 7px -3px rgba(0,0,0,0.7);
   &__image{
     height: 25vh;
     width: 25vw;
     object-fit: contain;
+  }
+  &__content {
+    margin: 10px;
+  }
+  &__title {
+    margin: 10px 0;
   }
 }
 

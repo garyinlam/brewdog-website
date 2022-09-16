@@ -3,11 +3,13 @@
 .filter-menu {
   display: none;
   background-color: $colour-gray;
+  border-right: 1px solid $colour-black;
 
 }
 
 .search {
   background-color: $colour-gray;
+  border-bottom: 1px solid $colour-black;
 }
 
 @media screen and (min-width: 992px) {
