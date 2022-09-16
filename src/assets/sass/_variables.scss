@@ -5,5 +5,7 @@ $font-header: 'Rubik Dirt',Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal
 $font-default: 'Noto Sans',Helvetica Neue,Helvetica,Arial,sans-serif;
 
 $colour-primary: #75c6de;
-$colour-gray: #f3f3f5;
+$colour-gray: #d0d0d0;
 $colour-black: #111111;
+
+$background-grad: linear-gradient(180deg, $colour-gray 0%, $colour-gray 10%, white 20%, white 30%, $colour-gray 40%, $colour-gray 50%, white 60%, white 70%, $colour-gray 80%, $colour-gray 90%, white 100%);

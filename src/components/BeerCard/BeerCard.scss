@@ -6,6 +6,8 @@
   display: flex;
   padding: 2px;
   box-shadow: 5px 5px 7px -3px rgba(0,0,0,0.7);
+  background: $colour-gray;
+  background: $background-grad;
   &__image{
     height: 25vh;
     width: 25vw;

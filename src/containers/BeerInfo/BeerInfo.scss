@@ -1,5 +1,10 @@
 @use "../../assets/sass/variables" as *;
 
+.beer-info {
+  background: $colour-gray;
+  background: $background-grad;
+}
+
 @media screen and (min-width: 992px) {
   .beer-info {
     display: grid;
